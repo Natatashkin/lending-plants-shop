@@ -1,0 +1,23 @@
+.buttons {
+  display: flex;
+}
+.button {
+  display: block;
+  padding: 8px 32px;
+  color: $accent-color;
+  font-family: $button-font;
+  font-size: 14px;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.button:hover,
+.button:focus {
+  background-color: $accent-color;
+  color: $buttons-text-color;
+}
+
+.active {
+  background-color: $accent-color;
+  color: $buttons-text-color;
+}
