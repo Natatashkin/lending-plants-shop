@@ -3,10 +3,8 @@
 
   &-list {
     display: flex;
-    padding-left: 0;
-    margin: -16px;
-
-    list-style: none;
+    @extend %list;
+    margin: 0 -16px;
   }
 
   &-item {
