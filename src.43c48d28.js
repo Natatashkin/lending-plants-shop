@@ -7,4 +7,4 @@ module.exports=[{url:"./images/slider/slider1.jpg",title:"kembang flower mantap"
 },{"./slider.json":"yaNc"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/slider");
 },{"./sass/main.scss":"clu1","./js/slider":"wzuc"}]},{},["Focm"], null)
-//# sourceMappingURL=/lending-plants-shop/src.20949a9e.js.map
+//# sourceMappingURL=/lending-plants-shop/src.43c48d28.js.map
