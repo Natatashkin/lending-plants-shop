@@ -1,4 +1,11 @@
 body {
   position: relative;
+  // top: -40px;
+  // bottom: 40px;
   font-family: $primary-font;
+}
+
+.padding {
+  padding-top: 80px;
+  padding-bottom: 80px;
 }

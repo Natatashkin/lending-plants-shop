@@ -3,15 +3,15 @@
   top: 40px;
   z-index: 10;
 
-  .logo {
-    display: inline-block;
-    flex-grow: 1;
-  }
-
   .navbar {
     width: 100%;
     display: flex;
     align-items: center;
+
+    .logo {
+      display: inline-block;
+      flex-grow: 1;
+    }
 
     .icon {
       fill: $primary-text-color;
