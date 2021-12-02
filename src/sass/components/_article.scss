@@ -1,0 +1,28 @@
+.article {
+  display: flex;
+  &-preview {
+    margin-right: 84px;
+  }
+
+  &-title {
+    max-width: 512px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    margin-left: 21px;
+
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  &-descr {
+    max-width: 506px;
+    margin-top: 0;
+    margin-bottom: 82px;
+    margin-left: 21px;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+  }
+}

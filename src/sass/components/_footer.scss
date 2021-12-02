@@ -1,0 +1,75 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 71px;
+  border-top: 1px solid $border-color;
+  font-family: $footer-font;
+
+  //   .shop-info {
+  //     // width: 282px;
+  //     // margin-right: 80px;
+  //   }
+
+  &-logo {
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: $accent-color;
+    font-family: $logo-font;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .shop-name {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.7;
+  }
+
+  .shop-address {
+    width: 282px;
+    color: $footer-text-color;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .company-data {
+    .title {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .data {
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.1;
+    }
+  }
+
+  .subscribe {
+    width: 234px;
+
+    & label {
+      display: flex;
+      flex-direction: column;
+    }
+
+    & input {
+      margin-top: 14px;
+      margin-bottom: 14px;
+    }
+  }
+
+  &-btn {
+    border: none;
+  }
+}

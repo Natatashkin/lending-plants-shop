@@ -1,0 +1,21 @@
+.call-to-action {
+  display: flex;
+
+  .text {
+    padding-top: 88px;
+    padding-left: 97px;
+    padding-bottom: 88px;
+    background-color: $secondary-background;
+    & .title {
+      margin-top: 0;
+      margin-bottom: 32px;
+
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+    .photo {
+      background-color: $secondary-background;
+    }
+  }
+}

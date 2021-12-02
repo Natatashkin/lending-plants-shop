@@ -2,22 +2,38 @@
   display: flex;
 }
 .button {
-  display: block;
+  display: inline-block;
   padding: 8px 32px;
-  color: $accent-color;
+
   font-family: $button-font;
   font-size: 14px;
   line-height: 1.4;
   text-decoration: none;
-}
 
-.button:hover,
-.button:focus {
-  background-color: $accent-color;
-  color: $buttons-text-color;
-}
+  &.green {
+    color: $buttons-text-color;
+    background-color: $accent-color;
 
-.active {
-  background-color: $accent-color;
-  color: $buttons-text-color;
+    &:hover,
+    &:focus {
+      color: $accent-color;
+      background-color: $primary-background;
+    }
+  }
+
+  &.white {
+    color: $accent-color;
+    background-color: $primary-background;
+
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+      color: $buttons-text-color;
+    }
+  }
+
+  .active {
+    background-color: $accent-color;
+    color: $buttons-text-color;
+  }
 }
