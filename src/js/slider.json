@@ -1,17 +1,14 @@
 [
-    {
-        "url": "./images/slider/slider1.jpg",
-        "title": "kembang flower mantap",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-    },
-    {
-        "url": "./images/slider/slider2.jpg",
-        "title": "Rahasia Plant",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-    },
-    {
-        "url": "./images/slider/slider3.jpg",
-        "title": "Kaktus Plant",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-    }
+  {
+    "title": "kembang flower mantap",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+  },
+  {
+    "title": "Rahasia Plant",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the"
+  },
+  {
+    "title": "Kaktus Plant",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the s"
+  }
 ]

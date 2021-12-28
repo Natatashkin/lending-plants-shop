@@ -57,19 +57,42 @@
 
   .subscribe {
     width: 234px;
-
     & label {
       display: flex;
       flex-direction: column;
-    }
+      margin-top: 0;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1;
 
-    & input {
-      margin-top: 14px;
-      margin-bottom: 14px;
+      & .subscribe-input {
+        margin-top: 14px;
+        margin-bottom: 18px;
+        padding: 8px 13px;
+        border: 1px solid #f2f2f2;
+        border-radius: 2px;
+
+        &::placeholder {
+          color: rgba(0, 0, 0, 0.5);
+          text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          font-size: 12px;
+          line-height: 1.33;
+        }
+      }
     }
   }
 
   &-btn {
+    padding: 4px 12px;
     border: none;
+    border-radius: 2px;
+
+    color: $buttons-text-color;
+    background-color: $accent-color;
+
+    font-family: $subscribe-btn;
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 1.75;
   }
 }

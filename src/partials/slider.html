@@ -1,38 +1,59 @@
 <!-- Main slider -->
 <section class="slider">
-    <div class="slider-container">
-        <div class="slider-image" data-image>
-            <img src="./images/slider/slider1.jpg" alt="">
-        </div>
-        <div class="slider-info" data-info>
-            <h1 class='slider-title'>kembang flower mantap</h1>
-            <p class="slider-descr">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                has been
-                the industry's standard dummy text ever since the 1500s, </p>
-            <div class="slider-buttons" data-controls>
-                <button class="slider-button" type='button' data-action='previous'>
-                    <div class="arrow">
-                        <span class="arrow-pagination">
-                            <svg class="icon" width='32' height='32'>
-                                <use href="./images/sprite.svg#icon-left-arrow"></use>
-                            </svg>
-                        </span>
-                        <span class="arrow-text prev">Previous</span>
-                    </div>
-                    <span class="button-title">Kaktus Plant</span>
-                </button>
-                <button class="slider-button" type='button' data-action='next'>
-                    <div class="arrow">
-                        <span class="arrow-text next">next</span>
-                        <span class="arrow-pagination">
-                            <svg class="icon" width='32' height='32'>
-                                <use href="./images/sprite.svg#icon-right-arrow"></use>
-                            </svg>
-                        </span>
-                    </div>
-                    <span class="button-title">Rahasia Plant</span>
-                </button>
-            </div>
-        </div>
+  <div class="slider-container" data-slider>
+    <div class="slider-image-wrapper">
+      <div class="slider-image" data-images>
+        <!-- First Slide -->
+        <img
+          class="slide"
+          src="./images/slider/slider1.jpg"
+          alt="kembang flower mantap"
+        />
+        <!-- Second Slide -->
+        <img
+          class="slide"
+          src="./images/slider/slider2.jpg"
+          alt="Rahasia Plant"
+        />
+        <!-- Third Slide -->
+        <img
+          class="slide"
+          src="./images/slider/slider3.jpg"
+          alt="Kaktus Plant"
+        />
+      </div>
     </div>
+
+    <!-- Slider info -->
+    <div class="slider-info">
+      <div class="slider-description" data-info>
+        <h1 class="slider-title"></h1>
+        <p class="slider-descr"></p>
+      </div>
+      <div class="slider-buttons" data-controls>
+        <button class="slider-button" type="button" data-action="previous">
+          <div class="arrow">
+            <span class="arrow-pagination">
+              <svg class="icon" width="32" height="32">
+                <use href="./images/sprite.svg#icon-left-arrow"></use>
+              </svg>
+            </span>
+            <span class="arrow-text prev">Previous</span>
+          </div>
+          <span class="button-title js-prev"></span>
+        </button>
+        <button class="slider-button" type="button" data-action="next">
+          <div class="arrow">
+            <span class="arrow-text next">next</span>
+            <span class="arrow-pagination">
+              <svg class="icon" width="32" height="32">
+                <use href="./images/sprite.svg#icon-right-arrow"></use>
+              </svg>
+            </span>
+          </div>
+          <span class="button-title js-next"></span>
+        </button>
+      </div>
+    </div>
+  </div>
 </section>
