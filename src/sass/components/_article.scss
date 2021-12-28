@@ -25,4 +25,12 @@
     font-weight: 400;
     line-height: 1.8;
   }
+
+  &-image {
+    width: 568px;
+
+    &-img {
+      width: 100%;
+    }
+  }
 }
