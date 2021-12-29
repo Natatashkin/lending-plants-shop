@@ -5,20 +5,40 @@
   background: $slider-gradient;
 
   &-container {
+    position: relative;
     display: flex;
     max-width: 1280px;
-    height: 740px;
+    height: 100vh;
+
     margin-left: auto;
     margin-right: auto;
     background-color: #fff;
+
+    @media (min-width: $tablet) {
+      height: 740px;
+    }
+  }
+
+  &-image-wrapper {
+    width: 100%;
+    height: 100%;
+
+    @media (min-width: $tablet) {
+      width: 608px;
+      height: 100%;
+    }
   }
 
   &-image {
     position: relative;
     display: flex;
-    width: 608px;
     height: 100%;
     overflow-x: hidden;
+
+    @media (min-width: $tablet) {
+      width: 608px;
+      height: 100%;
+    }
 
     & .slide {
       position: absolute;
@@ -37,38 +57,86 @@
   }
 
   &-info {
-    width: calc(1280px - 608px);
-    height: 738px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $tablet) {
+      position: static;
+      top: auto;
+      left: auto;
+      width: calc(100% - 608px);
+      height: 740px;
+    }
   }
 
   &-description {
-    height: 582px;
-    padding: 188px 75px 108px 76px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-end;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: $slider-pagination-color;
+
+    @media (min-width: $tablet) {
+      height: 582px;
+      padding-top: 100px;
+      padding-bottom: 108px;
+      padding-left: 47px;
+      padding-right: 75px;
+      background: transparent;
+    }
   }
 
   &-title {
-    max-width: 523px;
+    max-width: 100%;
     margin-top: 0;
-    margin-bottom: 24px;
+    margin-bottom: 15px;
 
     font-family: $primary-font;
-    font-size: 68px;
-    font-weight: 500;
-    line-height: 1.2;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.1;
     text-transform: capitalize;
 
-    color: $accent-color;
+    color: $buttons-text-color;
+
+    @media (min-width: $tablet) {
+      max-width: 523px;
+      margin-bottom: 24px;
+
+      font-size: 68px;
+      font-weight: 500;
+      line-height: 1.2;
+      color: $accent-color;
+    }
   }
 
   .slider-descr {
-    // width: 493px;
-    // margin-left: 77px;
     margin: 0;
 
     font-family: $primary-font;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 1.8;
+    line-height: 1.4;
+
+    color: $buttons-text-color;
+
+    @media (min-width: $tablet) {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.8;
+
+      color: initial;
+    }
   }
 
   &-buttons {
@@ -81,12 +149,17 @@
     border: none;
     width: 50%;
     flex-direction: column;
-    padding: 38px 49px;
+    padding: 20px 15px;
     background-color: #fff;
-    overflow: hidden;
 
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1;
+    text-align: start;
+
+    @media (min-width: $tablet) {
+      padding: 38px 49px;
+      line-height: 1.2;
+    }
 
     &:hover,
     &:focus {
@@ -102,9 +175,13 @@
       display: flex;
       margin-bottom: 12px;
       align-items: center;
-      font-size: 24px;
+      font-size: 20px;
       text-transform: capitalize;
       color: $slider-pagination-color;
+
+      @media (min-width: $tablet) {
+        font-size: 24px;
+      }
 
       &-text.prev {
         margin-left: 8px;
@@ -116,17 +193,28 @@
       &-pagination {
         display: flex;
         align-items: center;
+        width: 20px;
+        height: 20px;
+
+        @media (min-width: $tablet) {
+          width: 32px;
+          height: 32px;
+        }
       }
     }
 
     .button-title {
       width: 100%;
-      font-size: 32px;
+      font-size: 18px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       text-transform: capitalize;
       color: $accent-color;
+
+      @media (min-width: $tablet) {
+        font-size: 32px;
+      }
     }
   }
 }

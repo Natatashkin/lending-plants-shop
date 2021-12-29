@@ -3,12 +3,17 @@
 }
 .button {
   display: inline-block;
-  padding: 8px 32px;
+  padding: 4px 16px;
 
   font-family: $button-font;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.4;
   text-decoration: none;
+
+  @media (min-width: $tablet) {
+    padding: 8px 32px;
+    font-size: 14px;
+  }
 
   &.green {
     color: $buttons-text-color;

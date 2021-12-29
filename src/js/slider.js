@@ -43,6 +43,12 @@ export default class Slider {
     this.addEventListeners();
   }
 
+  setSliderHeight() {
+    const innerHeight = window.innerHeight;
+    const slider = document.querySelector('.slider-container');
+    slider.style.height = `${innerHeight}px`;
+  }
+
   normalizeDataObject() {
     const { sliderInfo, refs } = this;
     const { images } = refs;
@@ -90,6 +96,7 @@ export default class Slider {
 
     currentImage.classList.add('is-active');
     this.setButtonsContent();
+    this.setSliderHeight();
   }
 
   resetActiveImage() {

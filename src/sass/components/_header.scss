@@ -8,16 +8,33 @@
     display: flex;
     align-items: center;
 
+    @media (min-width: $tablet) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
     .logo {
       display: inline-block;
       flex-grow: 1;
     }
 
     .icon {
-      fill: $primary-text-color;
+      fill: $buttons-text-color;
+      width: 15px;
+      height: 15px;
+
+      @media (min-width: $tablet) {
+        width: 20px;
+        height: 20px;
+        fill: $primary-text-color;
+      }
 
       &.search {
-        margin-right: 40px;
+        margin-right: 10px;
+
+        @media (min-width: $tablet) {
+          margin-right: 40px;
+        }
       }
 
       &.cart {
