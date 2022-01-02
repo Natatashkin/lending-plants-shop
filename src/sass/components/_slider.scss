@@ -1,7 +1,4 @@
 .slider {
-  position: relative;
-  top: -40px;
-  margin-bottom: -41px;
   background: $slider-gradient;
 
   &-container {
@@ -23,7 +20,11 @@
     width: 100%;
     height: 100%;
 
-    @media (min-width: $tablet) {
+    @media (min-width: $tabletMd) {
+      width: 45%;
+    }
+
+    @media (min-width: $desktop) {
       width: 608px;
       height: 100%;
     }
@@ -32,11 +33,12 @@
   &-image {
     position: relative;
     display: flex;
+    width: 100%;
     height: 100%;
     overflow-x: hidden;
 
     @media (min-width: $tablet) {
-      width: 608px;
+      width: 100%;
       height: 100%;
     }
 
@@ -64,8 +66,21 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: end;
 
-    @media screen and (min-width: $tablet) {
+    @media (min-width: $tablet) {
+      height: 740px;
+    }
+
+    @media (min-width: $tabletMd) {
+      position: static;
+      top: auto;
+      left: auto;
+      width: 55%;
+      height: 740px;
+    }
+
+    @media (min-width: $desktop) {
       position: static;
       top: auto;
       left: auto;
@@ -87,9 +102,12 @@
     background: $slider-pagination-color;
 
     @media (min-width: $tablet) {
-      height: 582px;
-      padding-top: 100px;
-      padding-bottom: 108px;
+      padding-left: 30px;
+      padding-right: 30px;
+      background: transparent;
+    }
+
+    @media (min-width: $desktop) {
       padding-left: 47px;
       padding-right: 75px;
       background: transparent;
@@ -110,6 +128,13 @@
     color: $buttons-text-color;
 
     @media (min-width: $tablet) {
+      font-size: 48px;
+      font-weight: 500;
+      line-height: 1.2;
+      color: $accent-color;
+    }
+
+    @media (min-width: $desktop) {
       max-width: 523px;
       margin-bottom: 24px;
 
@@ -149,7 +174,7 @@
     border: none;
     width: 50%;
     flex-direction: column;
-    padding: 20px 15px;
+    padding: 25px 15px;
     background-color: #fff;
 
     font-weight: 500;
@@ -157,6 +182,10 @@
     text-align: start;
 
     @media (min-width: $tablet) {
+      padding: 25px 30px;
+    }
+
+    @media (min-width: $desktopMd) {
       padding: 38px 49px;
       line-height: 1.2;
     }
@@ -213,6 +242,10 @@
       color: $accent-color;
 
       @media (min-width: $tablet) {
+        font-size: 24px;
+      }
+
+      @media (min-width: $desktop) {
         font-size: 32px;
       }
     }

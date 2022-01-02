@@ -1,21 +1,68 @@
 .call-to-action {
-  display: flex;
+  .wrapper {
+    background-color: $secondary-background;
+
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 450px) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
 
   .text {
-    padding-top: 88px;
-    padding-left: 97px;
-    padding-bottom: 88px;
-    background-color: $secondary-background;
+    padding-top: 24px;
+    padding-right: 24px;
+    padding-left: 24px;
+    padding-bottom: 24px;
+
+    @media (min-width: $tablet) {
+      padding-top: 44px;
+      padding-left: 54px;
+      padding-bottom: 44px;
+      padding-bottom: 44px;
+    }
+    @media (min-width: $desktopMd) {
+      padding-top: 88px;
+      padding-left: 97px;
+      padding-bottom: 88px;
+      padding-bottom: 44px;
+    }
+
     & .title {
       margin-top: 0;
-      margin-bottom: 32px;
+      margin-bottom: 24px;
 
-      font-size: 40px;
+      font-size: 18px;
       font-weight: 700;
       line-height: 1.4;
+
+      @media (min-width: 450px) {
+        margin-bottom: 32px;
+        font-size: 28px;
+      }
+
+      @media (min-width: $tablet) {
+        margin-bottom: 32px;
+        font-size: 36px;
+      }
+
+      @media (min-width: $desktopMd) {
+        margin-bottom: 32px;
+        font-size: 40px;
+      }
     }
-    .photo {
-      background-color: $secondary-background;
+  }
+
+  .image {
+    max-width: 420px;
+
+    & .photo {
+      display: block;
+      // margin-left: 39px;
+      // margin-right: 39px;
+      width: 100%;
     }
   }
 }

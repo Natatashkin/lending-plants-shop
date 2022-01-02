@@ -44,9 +44,14 @@ export default class Slider {
   }
 
   setSliderHeight() {
-    const innerHeight = window.innerHeight;
     const slider = document.querySelector('.slider-container');
-    slider.style.height = `${innerHeight}px`;
+    if (window.matchMedia(`(max-width: 767px)`).matches) {
+      const innerHeight = window.innerHeight;
+      slider.style.height = `${innerHeight}px`;
+      return slider.style.height;
+    } else {
+      slider.removeAttribute('style');
+    }
   }
 
   normalizeDataObject() {
@@ -78,6 +83,21 @@ export default class Slider {
       'click',
       this.onNextButtonClick.bind(this),
     );
+    screen.orientation.addEventListener(
+      'change',
+      this.onResizeWindow.bind(this),
+    );
+  }
+
+  onResizeWindow() {
+    console.log('перевернули экран');
+    const slider = document.querySelector('.slider-container');
+
+    if (screen.orientation.type === 'portrait-primary') {
+      this.setSliderHeight();
+    } else {
+      slider.removeAttribute('style');
+    }
   }
 
   setSliderMainContent() {

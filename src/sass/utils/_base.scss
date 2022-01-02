@@ -1,11 +1,32 @@
 body {
   position: relative;
-  // top: -40px;
-  // bottom: 40px;
   font-family: $primary-font;
+  background-color: #fff;
+  padding-top: 81px;
+}
+
+main {
+  position: relative;
+  top: -40px;
+  margin-top: -81px;
+}
+
+h2,
+h3 {
+  margin: 0;
 }
 
 .padding {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 }

@@ -1,35 +1,69 @@
 .article {
   display: flex;
+  justify-content: center;
   &-preview {
-    margin-right: 84px;
+    @media (min-width: $desktopMd) {
+      margin-right: 84px;
+    }
   }
 
   &-title {
-    max-width: 512px;
     margin-top: 0;
     margin-bottom: 16px;
-    margin-left: 21px;
 
-    font-size: 40px;
+    font-size: 24px;
     font-weight: 700;
     line-height: 1.4;
+
+    @media (min-width: $tablet) {
+      max-width: 512px;
+      margin-left: 21px;
+      font-size: 40px;
+    }
+
+    @media (min-width: $desktopMd) {
+      max-width: 512px;
+      margin-left: 21px;
+      // font-size: 40px
+    }
   }
 
   &-descr {
-    max-width: 506px;
     margin-top: 0;
-    margin-bottom: 82px;
-    margin-left: 21px;
+    margin-bottom: 44px;
 
     font-size: 16px;
     font-weight: 400;
     line-height: 1.8;
+
+    @media (min-width: $tablet) {
+      margin-left: 21px;
+    }
+
+    @media (min-width: $desktopMd) {
+      margin-bottom: 82px;
+      max-width: 506px;
+      margin-left: 21px;
+    }
+  }
+
+  &-small-image {
+    display: block;
+
+    & img {
+      width: 100%;
+    }
   }
 
   &-image {
-    width: 568px;
+    display: none;
 
-    &-img {
+    @media (min-width: $desktopMd) {
+      display: block;
+      width: 568px;
+    }
+
+    & img {
       width: 100%;
     }
   }
