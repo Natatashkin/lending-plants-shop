@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
 
-    @media (min-width: $tablet) {
+    @media (min-width: $desktop) {
       padding-left: 0;
       padding-right: 0;
     }

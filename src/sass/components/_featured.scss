@@ -37,6 +37,7 @@
     margin: 0 -10px;
 
     @media (min-width: 450px) {
+      justify-content: space-evenly;
       flex-direction: row;
       flex-wrap: wrap;
     }

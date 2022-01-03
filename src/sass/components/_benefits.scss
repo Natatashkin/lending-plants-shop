@@ -12,18 +12,8 @@
   &-list {
     display: flex;
     @extend %list;
-    margin: 0 -16px;
+    margin: 0 -15px;
     flex-wrap: wrap;
-
-    @media (min-width: 450px) {
-      margin: 0 -15px;
-      // flex-wrap: wrap;
-    }
-
-    @media (min-width: $tablet) {
-      margin: 0 -16px;
-      // flex-wrap: wrap;
-    }
   }
 
   &-item {
