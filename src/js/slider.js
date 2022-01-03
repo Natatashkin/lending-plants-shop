@@ -8,6 +8,8 @@ export default class Slider {
   }) {
     this.currentIndex = 0;
     this.sliderInfo = sliderData;
+    this.sliderHeight = window.innerHeight;
+    this.slidetWidth = window.innerWidth;
     this.refs = this.getRefs(
       imagesContainer,
       sliderInfoSelector,
@@ -40,17 +42,16 @@ export default class Slider {
   init() {
     this.normalizeDataObject();
     this.setSliderMainContent();
+    this.setSliderHeight();
     this.addEventListeners();
   }
 
   setSliderHeight() {
     const slider = document.querySelector('.slider-container');
     if (window.matchMedia(`(max-width: 767px)`).matches) {
-      const innerHeight = window.innerHeight;
-      slider.style.height = `${innerHeight}px`;
-      return slider.style.height;
-    } else {
-      slider.removeAttribute('style');
+      slider.style.height = `${this.sliderHeight + 40}px`;
+      // } else {
+      //   slider.removeAttribute('style');
     }
   }
 
@@ -63,13 +64,11 @@ export default class Slider {
   }
 
   onPrevButtonClick() {
-    console.log('клик по prevButton');
     this.decrementIndex();
     this.setSliderMainContent();
   }
 
   onNextButtonClick() {
-    console.log('клик по nextButton');
     this.incrementIndex();
     this.setSliderMainContent();
   }
@@ -85,19 +84,19 @@ export default class Slider {
     );
     screen.orientation.addEventListener(
       'change',
-      this.onResizeWindow.bind(this),
+      this.onOrientationChange.bind(this),
     );
   }
 
-  onResizeWindow() {
-    console.log('перевернули экран');
+  onOrientationChange() {
     const slider = document.querySelector('.slider-container');
 
-    if (screen.orientation.type === 'portrait-primary') {
-      this.setSliderHeight();
-    } else {
-      slider.removeAttribute('style');
-    }
+    slider.style.height = '';
+
+    this.sliderHeight = window.innerHeight;
+    this.slidetWidth = window.innerWidth;
+
+    slider.style.height = window.innerHeight;
   }
 
   setSliderMainContent() {
@@ -116,7 +115,6 @@ export default class Slider {
 
     currentImage.classList.add('is-active');
     this.setButtonsContent();
-    this.setSliderHeight();
   }
 
   resetActiveImage() {

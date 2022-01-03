@@ -95,7 +95,7 @@
     flex-grow: 1;
     justify-content: flex-end;
     height: auto;
-    padding-top: 50px;
+    padding-top: 100px;
     padding-bottom: 50px;
     padding-left: 15px;
     padding-right: 15px;
@@ -222,12 +222,13 @@
       &-pagination {
         display: flex;
         align-items: center;
-        width: 20px;
-        height: 20px;
-
-        @media (min-width: $tablet) {
-          width: 32px;
-          height: 32px;
+        & .icon {
+          width: 20px;
+          height: 20px;
+          @media (min-width: $tablet) {
+            width: 32px;
+            height: 32px;
+          }
         }
       }
     }
