@@ -7,4 +7,4 @@ module.exports=[{title:"kembang flower mantap",description:"Lorem Ipsum is simpl
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss");var e=a(require("./js/slider.json")),t=a(require("./js/slider"));function a(e){return e&&e.__esModule?e:{default:e}}const r=new t.default({sliderData:e.default,imagesContainer:"[data-images]",sliderInfoSelector:"[data-info]",prevBtnSelector:'[data-action="previous"]',nextBtnSelector:'[data-action="next"]'});
 },{"./sass/main.scss":"clu1","./js/slider.json":"yaNc","./js/slider":"wzuc"}]},{},["Focm"], null)
-//# sourceMappingURL=/lending-plants-shop/src.f6f98d6b.js.map
+//# sourceMappingURL=/lending-plants-shop/src.f9661da4.js.map
