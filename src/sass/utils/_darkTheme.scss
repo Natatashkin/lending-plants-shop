@@ -1,5 +1,6 @@
 body.dark-theme {
   background-color: $dark-theme-background;
+  color: $dark-theme-text;
 }
 
 .header {
@@ -37,5 +38,11 @@ body.dark-theme {
         fill: $slider-pagination-color;
       }
     }
+  }
+}
+
+.call-to-action {
+  .text {
+    color: $primary-text-color;
   }
 }

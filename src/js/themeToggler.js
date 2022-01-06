@@ -11,6 +11,7 @@ const refs = {
   sliderPagination: document.querySelectorAll('.arrow'),
   sliderBackground: document.querySelector('.slider-container'),
   sliderDesctiption: document.querySelector('.slider-descr'),
+  benefitsText: document.querySelector('.benefits-descr'),
 };
 
 const { LIGHT, DARK } = Theme;
@@ -31,8 +32,8 @@ function onTogglerClick(e) {
     setDarkTheme();
     localStorage.setItem('theme', DARK);
   } else {
-    // localStorage.setItem('theme', LIGHT);
-    localStorage.removeItem('theme');
+    localStorage.setItem('theme', LIGHT);
+    // localStorage.removeItem('theme');
     setLightTheme();
   }
 }
