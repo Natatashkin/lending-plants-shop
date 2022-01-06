@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "title": "Kaktus Plants",
+    "price": "85.000"
+  },
+  {
+    "id": 2,
+    "title": "Landak Plants",
+    "price": "105.000"
+  },
+  {
+    "id": 3,
+    "title": "Kecubung Plants",
+    "price": "85.000"
+  },
+  {
+    "id": 4,
+    "title": "Kecubung Plants",
+    "price": "75.000"
+  },
+  {
+    "id": 5,
+    "title": "Kecubung Plants",
+    "price": "120.000"
+  }
+]

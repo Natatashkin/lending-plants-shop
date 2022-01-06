@@ -1,0 +1,41 @@
+body.dark-theme {
+  background-color: $dark-theme-background;
+}
+
+.header {
+  .navbar {
+    .options-wrapper {
+      .options-icon {
+        &.dark-theme {
+          @media (min-width: $tabletMd) {
+            fill: $dark-theme-text;
+          }
+        }
+      }
+    }
+  }
+}
+
+.slider {
+  &-container.dark-theme {
+    background-color: $dark-theme-background;
+  }
+
+  .slider-descr.dark-theme {
+    color: $dark-theme-text;
+  }
+
+  &-button {
+    &.dark-theme {
+      background-color: $dark-theme-background;
+    }
+
+    &:hover,
+    &:focus {
+      & .arrow.dark-theme {
+        color: $slider-pagination-color;
+        fill: $slider-pagination-color;
+      }
+    }
+  }
+}

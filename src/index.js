@@ -1,6 +1,9 @@
 import './sass/main.scss';
+import './js/themeToggler';
 import sliderInfo from './js/slider.json';
 import Slider from './js/slider';
+import './js/featured';
+import './js/backdrop';
 
 const slider = new Slider({
   sliderData: sliderInfo,

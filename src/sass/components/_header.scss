@@ -1,10 +1,10 @@
 .header {
-  position: sticky;
+  position: relative;
   margin-top: -40px;
-  // top: 40px;
   z-index: 10;
 
   .navbar {
+    position: relative;
     width: 100%;
     display: flex;
     align-items: center;
@@ -17,29 +17,52 @@
     .logo {
       display: inline-block;
       flex-grow: 1;
+      cursor: pointer;
     }
 
-    .icon {
-      fill: $buttons-text-color;
-      width: 15px;
-      height: 15px;
+    .options-wrapper {
+      position: absolute;
+      top: -25px;
+      right: 15px;
+      display: flex;
+      align-items: center;
 
       @media (min-width: $tablet) {
-        width: 20px;
-        height: 20px;
-        fill: $primary-text-color;
+        position: relative;
+        top: 0;
+        right: 0;
       }
 
-      &.search {
-        margin-right: 10px;
+      & > *:not(:last-child) {
+        margin-right: 15px;
 
         @media (min-width: $tablet) {
-          margin-right: 40px;
+          margin-right: 30px;
         }
       }
 
-      &.cart {
-        margin-right: 8px;
+      & > *:last-child {
+        @media (min-width: $tablet) {
+          margin-right: 15px;
+        }
+      }
+
+      .options-button {
+        display: flex;
+        align-items: center;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
+    }
+
+    .options-icon {
+      fill: $buttons-text-color;
+      width: 20px;
+      height: 20px;
+
+      @media (min-width: $tabletMd) {
+        fill: $primary-text-color;
       }
     }
   }

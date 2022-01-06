@@ -14,6 +14,11 @@ $slider-gradient: linear-gradient(
 );
 $primary-background: #ffffff;
 $secondary-background: rgb(243, 244, 246);
+$backdrop-background: rgba(51, 51, 51, 0.5);
+
+// dark theme
+$dark-theme-background: #333333;
+$dark-theme-text: #fafefe;
 
 // fonts
 $primary-font: 'Montserrat', sans-serif;

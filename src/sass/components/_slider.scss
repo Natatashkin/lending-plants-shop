@@ -9,7 +9,7 @@
 
     margin-left: auto;
     margin-right: auto;
-    background-color: #fff;
+    background-color: $primary-background;
 
     @media (min-width: $tablet) {
       height: 740px;
@@ -68,10 +68,6 @@
     flex-direction: column;
     justify-content: end;
 
-    @media (min-width: $tablet) {
-      // height: 740px;
-    }
-
     @media (min-width: $tabletMd) {
       position: static;
       top: auto;
@@ -101,6 +97,10 @@
     padding-right: 15px;
     background: $slider-pagination-color;
 
+    @media (min-height: 280px) and (max-height: 350px) {
+      padding-bottom: 20px;
+    }
+
     @media (min-width: $tablet) {
       padding-left: 30px;
       padding-right: 30px;
@@ -115,7 +115,6 @@
     @media (min-width: $desktop) {
       padding-left: 47px;
       padding-right: 75px;
-      background: transparent;
     }
   }
 
@@ -130,6 +129,10 @@
     line-height: 1.1;
     text-transform: capitalize;
     color: $buttons-text-color;
+
+    @media (min-height: 260px) and (max-height: 500px) {
+      font-size: 24px;
+    }
 
     @media (min-width: $tablet) {
       font-size: 48px;
@@ -167,8 +170,6 @@
       font-size: 18px;
       font-weight: 400;
       line-height: 1.8;
-
-      color: $buttons-text-color;
     }
 
     @media (min-width: $tabletMd) {
@@ -187,11 +188,13 @@
     width: 50%;
     flex-direction: column;
     padding: 25px 15px;
-    background-color: #fff;
+    background-color: $primary-background;
 
     font-weight: 500;
     line-height: 1;
     text-align: start;
+
+    cursor: pointer;
 
     @media (min-width: $tablet) {
       padding: 25px 30px;
@@ -210,6 +213,11 @@
       & .button-title {
         color: $buttons-text-color;
       }
+
+      & .arrow.dark-theme {
+        color: $slider-pagination-color;
+        fill: $slider-pagination-color;
+      }
     }
 
     .arrow {
@@ -219,6 +227,12 @@
       font-size: 20px;
       text-transform: capitalize;
       color: $slider-pagination-color;
+      fill: $slider-pagination-color;
+
+      &.dark-theme {
+        color: $buttons-text-color;
+        fill: $buttons-text-color;
+      }
 
       @media (min-width: $tablet) {
         font-size: 24px;
@@ -234,6 +248,7 @@
       &-pagination {
         display: flex;
         align-items: center;
+
         & .icon {
           width: 20px;
           height: 20px;

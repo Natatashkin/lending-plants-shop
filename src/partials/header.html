@@ -1,25 +1,50 @@
 <header class="header">
   <!-- Site menu -->
-    <div class="navbar container">
-      <a class="logo" aria-label="Логотип магазина">
-        <svg class="logo-icon" width='36' height='36'>
-          <use href="./images/sprite.svg#icon-logo"></use>
-        </svg>
-      </a>
-      <a class='link' href="#">
-        <svg class="icon search" width='20' height='20'>
+  <div class="navbar container">
+    <a class="logo" aria-label="Логотип магазина">
+      <svg class="logo-icon" width="36" height="36">
+        <use href="./images/sprite.svg#icon-logo"></use>
+      </svg>
+    </a>
+    <div class="options-wrapper">
+      <button type="button" class="options-button">
+        <svg class="options-icon search">
           <use href="./images/sprite.svg#icon-search"></use>
         </svg>
-      </a>
-      <a class='link' href="#">
-        <svg class="icon cart" width='20' height='20'>
+      </button>
+      <button type="button" class="options-button">
+        <svg class="options-icon cart">
           <use href="./images/sprite.svg#icon-shopping-cart"></use>
         </svg>
-      </a>  
-      <div class="buttons">
-          <a class="button white" href="#">Sign Up</a>
-          <a class="button green" href="#">Sign In</a>
+      </button>
+
+      <div class="theme-toggler js-toggler">
+        <input
+          class="theme-switch__toggle"
+          type="checkbox"
+          name="theme"
+          id="theme-switch-toggle"
+          aria-label="Переключить между тёмной и светлой темой"
+        />
+        <label
+          aria-hidden="true"
+          class="theme-switch__track"
+          for="theme-switch-toggle"
+        >
+          <svg class="icon-sun">
+            <use href="./images/sprite.svg#icon-sun"></use>
+          </svg>
+          <svg class="icon-moon">
+            <use href="./images/sprite.svg#icon-moon"></use>
+          </svg>
+        </label>
+        <span aria-hidden="true" class="theme-switch__marker"></span>
       </div>
     </div>
-</header>
 
+    <div class="buttons">
+      <a class="button white" href="#">Sign Up</a>
+      <a class="button green" href="#">Sign In</a>
+    </div>
+  </div>
+</header>

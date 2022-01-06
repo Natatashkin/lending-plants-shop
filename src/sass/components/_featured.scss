@@ -49,10 +49,15 @@
   }
 
   &-item {
-    width: 217px;
     margin-left: 10px;
     margin-right: 10px;
     text-align: center;
+    cursor: pointer;
+
+    &-thumb {
+      width: 217px;
+      height: 217px;
+    }
 
     &-image {
       width: 100%;

@@ -1,0 +1,28 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $backdrop-background;
+  z-index: 11;
+  display: none;
+
+  body.show-modal & {
+    display: block;
+  }
+
+  .lightbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 80%;
+    height: 80%;
+    border: 2px solid red;
+    background-color: #fff;
+    border-radius: 4px;
+    // margin-top: 20px;
+    // margin-bottom: 20px;
+  }
+}
