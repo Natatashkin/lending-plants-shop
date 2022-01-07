@@ -1,5 +1,6 @@
 import './sass/main.scss';
 import './js/themeToggler';
+import setCurrentTheme from './js/themeToggler';
 import sliderInfo from './js/slider.json';
 import Slider from './js/slider';
 import './js/featured';
@@ -12,3 +13,5 @@ const slider = new Slider({
   prevBtnSelector: '[data-action="previous"]',
   nextBtnSelector: '[data-action="next"]',
 });
+
+setCurrentTheme();

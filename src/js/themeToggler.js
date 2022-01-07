@@ -11,7 +11,6 @@ const refs = {
   sliderPagination: document.querySelectorAll('.arrow'),
   sliderBackground: document.querySelector('.slider-container'),
   sliderDesctiption: document.querySelector('.slider-descr'),
-  benefitsText: document.querySelector('.benefits-descr'),
 };
 
 const { LIGHT, DARK } = Theme;
@@ -29,11 +28,12 @@ toggler.addEventListener('change', onTogglerClick);
 
 function onTogglerClick(e) {
   if (e.currentTarget.checked) {
+    console.log(e.currentTarget.checked);
     setDarkTheme();
     localStorage.setItem('theme', DARK);
   } else {
-    localStorage.setItem('theme', LIGHT);
-    // localStorage.removeItem('theme');
+    // localStorage.setItem('theme', LIGHT);
+    localStorage.removeItem('theme');
     setLightTheme();
   }
 }
@@ -71,3 +71,15 @@ function setDarkThemeForHeaderIcons() {
 function setLightThemeForHeaderIcons() {
   navbarIcons.forEach(icon => icon.classList.remove('dark-theme'));
 }
+
+function setCurrentTheme() {
+  const currentTheme = localStorage.getItem('theme');
+  console.log(currentTheme);
+
+  if (currentTheme) {
+    toggler.checked = true;
+    setDarkTheme();
+  }
+}
+
+export default setCurrentTheme;
