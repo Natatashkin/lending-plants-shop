@@ -1,4 +1,5 @@
 body.dark-theme {
+  // background-image: radial-gradient(circle at center, #59617c 10%, #1d2540 50%);
   background-color: $dark-theme-background;
   color: $dark-theme-text;
 }
@@ -18,6 +19,9 @@ body.dark-theme {
 }
 
 .slider {
+  &.dark-theme {
+    background-image: $dark-theme-gradient;
+  }
   &-container.dark-theme {
     background-color: $dark-theme-background;
   }

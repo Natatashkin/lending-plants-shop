@@ -50,8 +50,6 @@ export default class Slider {
     const slider = document.querySelector('.slider-container');
     if (window.matchMedia(`(max-width: 767px)`).matches) {
       slider.style.height = `${this.sliderHeight + 40}px`;
-      // } else {
-      //   slider.removeAttribute('style');
     }
   }
 

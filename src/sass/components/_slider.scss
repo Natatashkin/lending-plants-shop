@@ -206,7 +206,8 @@
     }
 
     &:hover,
-    &:focus {
+    &:focus,
+    &.active {
       background-color: $accent-color;
       color: $buttons-text-color;
 

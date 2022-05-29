@@ -1,6 +1,7 @@
 .article {
   display: flex;
   justify-content: center;
+
   &-preview {
     @media (min-width: $desktopMd) {
       margin-right: 84px;

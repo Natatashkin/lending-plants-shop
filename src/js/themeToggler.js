@@ -7,16 +7,18 @@ const refs = {
   body: document.querySelector('body'),
   toggler: document.querySelector('.theme-switch__toggle'),
   navbarIcons: document.querySelectorAll('.options-icon'),
+  sliderGradientBg: document.querySelector('.slider'),
   sliderButtons: document.querySelectorAll('.slider-button'),
   sliderPagination: document.querySelectorAll('.arrow'),
   sliderBackground: document.querySelector('.slider-container'),
   sliderDesctiption: document.querySelector('.slider-descr'),
 };
 
-const { LIGHT, DARK } = Theme;
+const { DARK } = Theme;
 const {
   body,
   toggler,
+  sliderGradientBg,
   sliderButtons,
   sliderPagination,
   sliderBackground,
@@ -32,7 +34,6 @@ function onTogglerClick(e) {
     setDarkTheme();
     localStorage.setItem('theme', DARK);
   } else {
-    // localStorage.setItem('theme', LIGHT);
     localStorage.removeItem('theme');
     setLightTheme();
   }
@@ -51,6 +52,7 @@ function setDarkTheme() {
 }
 
 function setDarkThemeForSlider() {
+  sliderGradientBg.classList.add('dark-theme');
   sliderButtons.forEach(button => button.classList.add('dark-theme'));
   sliderPagination.forEach(arrow => arrow.classList.add('dark-theme'));
   sliderBackground.classList.add('dark-theme');
@@ -58,6 +60,7 @@ function setDarkThemeForSlider() {
 }
 
 function setLightThemeForSlider() {
+  sliderGradientBg.classList.remove('dark-theme');
   sliderButtons.forEach(button => button.classList.remove('dark-theme'));
   sliderPagination.forEach(arrow => arrow.classList.remove('dark-theme'));
   sliderBackground.classList.remove('dark-theme');
