@@ -1,0 +1,42 @@
+.auth {
+  display: flex;
+}
+.link {
+  display: inline-block;
+  padding: 4px 16px;
+
+  color: $accent-color;
+  background-color: $primary-background;
+  outline: 1px solid $accent-color;
+
+  font-family: $button-font;
+  font-size: 12px;
+  line-height: 1.4;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &.active {
+    background-color: $accent-color;
+    color: $buttons-text-color;
+    outline: 1px solid $accent-color;
+  }
+
+  &.green {
+    background-color: $accent-color;
+    color: $buttons-text-color;
+
+    &:hover,
+    &:focus,
+    &.active {
+      color: $accent-color;
+      background-color: $primary-background;
+      outline: 1px solid $accent-color;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    padding: 8px 32px;
+    font-size: 14px;
+  }
+}

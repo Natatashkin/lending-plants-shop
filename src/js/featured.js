@@ -37,7 +37,6 @@ products.forEach(product => {
   product.srcset = `${productImages[index]} 1x, ${productImages[index + 1]} 2x`;
   index += 2;
 });
-console.log(products);
 renderFeaturedMarkup(products);
 
 refs.productList.addEventListener('click', onProductClick);

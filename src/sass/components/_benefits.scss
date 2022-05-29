@@ -49,12 +49,20 @@
       margin-left: 16px;
       margin-right: 16px;
 
+      transition-property: transform;
+      transition-duration: $time;
+      transition-timing-function: $cubic;
+
       &:not(:last-child) {
         margin-bottom: 0;
       }
 
       &:nth-child(-n + 2) {
         margin-bottom: 0;
+      }
+
+      &:hover {
+        transform: scale(1.1);
       }
     }
   }

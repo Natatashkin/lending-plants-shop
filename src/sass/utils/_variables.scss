@@ -34,9 +34,12 @@ $footer-font: 'Work Sans', sans-serif;
 $subscribe-btn: 'Raleway', sans-serif;
 
 // breakpoints
-
 $desktop: 1200px;
 $desktopMd: 1024px;
 $tablet: 768px;
 $tabletMd: 800px;
 $mobile: 320px;
+
+//transformations
+$time: 250ms;
+$cubic: cubic-bezier(0.4, 0, 0.2, 1);

@@ -36,6 +36,7 @@ export default class Slider {
     refs.prevBtnTitle = refs.prevButton.querySelector('.js-prev');
     refs.nextButton = document.querySelector(nextBtnSelector);
     refs.nextBtnTitle = refs.nextButton.querySelector('.js-next');
+    refs.buttonsContainer = document.querySelector('[data-controls]');
     return refs;
   }
 
@@ -62,11 +63,13 @@ export default class Slider {
   }
 
   onPrevButtonClick() {
+    this.setActiveButton(this.refs.prevButton);
     this.decrementIndex();
     this.setSliderMainContent();
   }
 
   onNextButtonClick() {
+    this.setActiveButton(this.refs.nextButton);
     this.incrementIndex();
     this.setSliderMainContent();
   }
@@ -100,7 +103,6 @@ export default class Slider {
   setSliderMainContent() {
     const { sliderInfo, currentIndex } = this;
     const { sliderTitle, sliderText, images } = this.refs;
-
     const currentSliderInfo = sliderInfo[currentIndex];
     sliderTitle.textContent = currentSliderInfo.title;
     sliderText.textContent = currentSliderInfo.description;
@@ -123,6 +125,14 @@ export default class Slider {
     }
   }
 
+  setActiveButton(selector) {
+    selector.classList.add('active');
+    this.resetActiveButton();
+  }
+  resetActiveButton() {
+    const buttons = this.refs.buttonsContainer.querySelectorAll('button');
+    buttons.forEach(button => button.classList.remove('active'));
+  }
   setButtonsContent() {
     const { sliderInfo, refs } = this;
     const { prevBtnTitle, nextBtnTitle } = refs;

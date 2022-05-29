@@ -3,6 +3,9 @@
   justify-content: center;
 
   &-preview {
+    display: flex;
+    flex-direction: column;
+
     @media (min-width: $desktopMd) {
       margin-right: 84px;
     }
@@ -25,11 +28,11 @@
     @media (min-width: $desktopMd) {
       max-width: 512px;
       margin-left: 21px;
-      // font-size: 40px
     }
   }
 
   &-descr {
+    flex-grow: 1;
     margin-top: 0;
     margin-bottom: 44px;
 

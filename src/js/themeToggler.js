@@ -30,7 +30,6 @@ toggler.addEventListener('change', onTogglerClick);
 
 function onTogglerClick(e) {
   if (e.currentTarget.checked) {
-    console.log(e.currentTarget.checked);
     setDarkTheme();
     localStorage.setItem('theme', DARK);
   } else {
@@ -60,8 +59,8 @@ function setDarkThemeForSlider() {
 }
 
 function setLightThemeForSlider() {
-  sliderGradientBg.classList.remove('dark-theme');
   sliderButtons.forEach(button => button.classList.remove('dark-theme'));
+  sliderGradientBg.classList.remove('dark-theme');
   sliderPagination.forEach(arrow => arrow.classList.remove('dark-theme'));
   sliderBackground.classList.remove('dark-theme');
   sliderDesctiption.classList.remove('dark-theme');
