@@ -1,5 +1,7 @@
 import { modal } from './backdrop';
 import products from './products.json';
+import LightBox from './lightbox';
+import dividePrice from './helpers/dividePrice';
 
 import kaktusPlants217 from '../images/featured/kaktus-plants/kaktus-plants-217.jpg';
 import kaktusPlants434 from '../images/featured/kaktus-plants/kaktus-plants-434.jpg';
@@ -42,10 +44,12 @@ renderFeaturedMarkup(products);
 refs.productList.addEventListener('click', onProductClick);
 
 function onProductClick(e) {
-  const product = e.target.closest('.featured-item');
-  const itemId = product.dataset.id;
-  console.log(itemId);
+  const currentProduct = e.target.closest('.featured-item');
+  const itemId = Number(currentProduct.dataset.id);
+  const item = products.find(({ id }) => id === itemId);
+  const lightbox = new LightBox({ product: item });
   modal.onOpen();
+  lightbox.init();
 }
 
 function renderFeaturedMarkup(items) {
@@ -64,7 +68,7 @@ function renderFeaturedMarkup(items) {
       <h3 class="item-title">${title}</h3>
       <p class="item-price">
         <span class="currensy">IDR </span>
-        <span class="price">${price}</span>
+        <span class="price">${dividePrice(price)}</span>
       </p>
     </li>`;
     })

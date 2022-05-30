@@ -45,6 +45,10 @@ body.dark-theme {
   }
 }
 
+.lightbox.dark-theme {
+  background-color: $dark-theme-background;
+}
+
 .call-to-action {
   .text {
     color: $primary-text-color;

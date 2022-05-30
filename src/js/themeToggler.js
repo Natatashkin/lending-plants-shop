@@ -24,11 +24,13 @@ const {
   sliderBackground,
   sliderDesctiption,
   navbarIcons,
+  lightBoxBackground,
 } = refs;
 
 toggler.addEventListener('change', onTogglerClick);
 
 function onTogglerClick(e) {
+  console.log(e.currentTarget);
   if (e.currentTarget.checked) {
     setDarkTheme();
     localStorage.setItem('theme', DARK);
@@ -46,8 +48,21 @@ function setLightTheme() {
 
 function setDarkTheme() {
   body.classList.add('dark-theme');
+
   setDarkThemeForHeaderIcons();
   setDarkThemeForSlider();
+}
+
+export function setLightboxDarkTheme() {
+  const lightBoxBackground = document.querySelector('.lightbox');
+  console.log(lightBoxBackground);
+  lightBoxBackground.classList.add('dark-theme');
+}
+
+export function setLightboxLightTheme() {
+  const lightBoxBackground = document.querySelector('.lightbox');
+
+  lightBoxBackground.classList.remove('dark-theme');
 }
 
 function setDarkThemeForSlider() {
@@ -76,7 +91,6 @@ function setLightThemeForHeaderIcons() {
 
 function setCurrentTheme() {
   const currentTheme = localStorage.getItem('theme');
-  console.log(currentTheme);
 
   if (currentTheme) {
     toggler.checked = true;

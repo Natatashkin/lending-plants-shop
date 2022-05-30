@@ -2,26 +2,31 @@
   {
     "id": 1,
     "title": "Kaktus Plants",
-    "price": "85.000"
+    "price": "85000",
+    "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro vel excepturi velit. Porro minus accusamus reprehenderit dolorum cupiditate enim! Fuga maxime ea numquam sunt ipsum, labore laboriosam maiores dignissimos eos"
   },
   {
     "id": 2,
     "title": "Landak Plants",
-    "price": "105.000"
+    "price": "105000",
+    "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id error enim placeat assumenda vel, tenetur molestiae velit corporis minima odit vero quasi, officia impedit omnis perspiciatis asperiores ratione modi nihil, nostrum accusamus autem? Debitis, illo."
   },
   {
     "id": 3,
     "title": "Kecubung Plants",
-    "price": "85.000"
+    "price": "85000",
+    "descr": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus facilis consequuntur ratione ducimus ex similique quidem amet minus nihil deserunt, sunt dignissimos voluptates eos cum iure vitae aliquid minima quisquam eveniet! Molestias, dolorem dolores explicabo assumenda veritatis deleniti dolorum saepe culpa voluptatibus velit officia, nobis est impedit nam delectus iste."
   },
   {
     "id": 4,
     "title": "Kecubung Plants",
-    "price": "75.000"
+    "price": "75000",
+    "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae et libero harum tempora ad dolore"
   },
   {
     "id": 5,
     "title": "Kecubung Plants",
-    "price": "120.000"
+    "price": "120000",
+    "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti illo nulla rem, quod possimus voluptas quisquam reprehenderit nihil laboriosam quos eligendi, perferendis consectetur natus minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti illo nulla rem, quod possimus voluptas quisquam reprehenderit nihil laboriosam quos eligendi, perferendis consectetur natus minima.Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti illo nulla rem, quod possimus voluptas quisquam reprehenderit nihil laboriosam quos eligendi, perferendis consectetur natus minima."
   }
 ]

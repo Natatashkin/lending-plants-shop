@@ -13,8 +13,14 @@ main {
 }
 
 h2,
-h3 {
+h3,
+p {
   margin: 0;
+}
+
+button {
+  outline: none;
+  border: none;
 }
 
 .padding {

@@ -1,5 +1,3 @@
-import { lightbox } from './lightbox';
-
 export const modal = {
   body: document.querySelector('body'),
   backdrop: document.querySelector('.backdrop'),

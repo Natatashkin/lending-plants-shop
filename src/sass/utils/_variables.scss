@@ -15,7 +15,7 @@ $slider-gradient: linear-gradient(
 
 $primary-background: #ffffff;
 $secondary-background: rgb(243, 244, 246);
-$backdrop-background: rgba(51, 51, 51, 0.5);
+$backdrop-background: rgba(51, 51, 51, 0.8);
 
 // dark theme
 $dark-theme-background: #1d2540;
@@ -38,6 +38,7 @@ $desktop: 1200px;
 $desktopMd: 1024px;
 $tablet: 768px;
 $tabletMd: 800px;
+$mobileMd: 630px;
 $mobile: 320px;
 
 //transformations

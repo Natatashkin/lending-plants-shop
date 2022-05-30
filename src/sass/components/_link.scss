@@ -14,6 +14,10 @@
   line-height: 1.4;
   text-decoration: none;
 
+  transition-property: background-color;
+  transition-duration: $time;
+  transition-timing-function: $cubic;
+
   &:hover,
   &:focus,
   &.active {
