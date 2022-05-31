@@ -32,42 +32,43 @@ export default class LightBox {
     <div class="lightbox">
       <div class="lightbox-wrapper">
         <div class="lightbox-info">
-        <div class="lightbox-image">
-          <div class="thumb">
-            <img
-          class="item-image"
-          srcset="${srcset}"
-          src="${src}"
-          alt="${title}"
-          width="217"
-          />
-          </div>
-        </div>
-
-        <div class="lightbox-options">
-          <p class="price">Price: ${this.divider(price)} IDR</p>
-
-          <div class="quantity">
-            <p class="text">Quantity:</p>
-
-            <div class="options" data-quantity-controls>
-              <button type="button" class="option js-decrement">-</button>
-              <span class="quantity-value js-value">${this.quantityValue}</span>
-              <button type="button" class="option js-increment">+</button>
+          <div class="lightbox-image">
+            <div class="thumb">
+              <img
+            class="item-image"
+            srcset="${srcset}"
+            src="${src}"
+            alt="${title}"
+            width="217"
+            />
             </div>
           </div>
 
-          <p class="total-price"> Total price:
-            <span class="value js-total">${this.totalValue}</span>
-            <span class="currency">IDR</span>
-          </p>
-          
-          <button class="add-to-cart js-add" type="button">Add to cart!</button>
-        </div> 
+          <div class="lightbox-options">
+            <p class="price">Price: ${this.divider(price)} IDR</p>
+
+            <div class="quantity">
+              <p class="text">Quantity:</p>
+
+              <div class="options" data-quantity-controls>
+                <button type="button" class="option js-decrement">-</button>
+                <span class="quantity-value js-value">${
+                  this.quantityValue
+                }</span>
+                <button type="button" class="option js-increment">+</button>
+              </div>
+            </div>
+
+            <p class="total-price"> Total price:
+              <span class="value js-total">${this.totalValue}</span>
+              <span class="currency">IDR</span>
+            </p>
+            
+            <button class="add-to-cart js-add" type="button">Add to cart!</button>
+          </div> 
+        </div>
+        <p class="lightbox-desciption">${descr}</p>
       </div>
-      <p class="lightbox-desciption">${descr}</p>
-      </div>
-      
     </div>
     `;
     this.backdrop.insertAdjacentHTML('afterbegin', markup);
